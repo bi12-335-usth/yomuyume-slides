@@ -4,7 +4,7 @@ class: -top-5
 title: Introduction
 ---
 
-<img src="/public/yomuyume.png" width="100px">
+<img src="/yomuyume.png" width="100px">
 
 # Yomuyume
 ## A self-hosted manga/comic media server
@@ -18,7 +18,7 @@ title: Introduction
 
 ---
 layout: image-right
-image: /public/current-solutions.png
+image: /current-solutions.png
 title: Problems and Goals
 ---
 
@@ -41,7 +41,7 @@ we have with current solutions
 
 ---
 layout: image-right
-image: /public/home.png
+image: /home.png
 ---
 
 # Highlights

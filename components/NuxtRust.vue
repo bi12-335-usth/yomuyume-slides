@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <img src="../public/nuxt.svg">
-        <img src="../public/rust.svg">
+        <img src="/nuxt.svg">
+        <img src="/rust.svg">
     </div>
 </template>
 
