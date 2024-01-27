@@ -26,12 +26,12 @@ title: Problems and Goals
 we have with current solutions
 
 - Bad UI/UX design choices
-- Too slow, too much performance overhead
-- No longer maintained
 - Inconvenient to manage metadata
+- No longer maintained
+- Too slow, too much performance overhead
 - Have primitive/no recommendation system
 
-*and more...*
+*and maybe more...*
 
 # Goals
 
@@ -39,71 +39,130 @@ we have with current solutions
 - Trying out new technologies
 - Experimenting with machine learning
 
+<!--
+[TODO]
+-->
+
+---
+layout: center
+---
+
+## UI/UX
+
+<!--
+First, let's talk about UI/UX
+
+we'll take a look at 2 popular products to better illustrate the problems
+-->
+
+---
+layout: image
+image: /komga-home.png
+---
+
+<!--
+The first one is Komga
+
+✔️
+- 3.1k stars on Github
+- The navigation bar is good
+
+❌
+- Using material design 2 | released in 2014 - a decade ago
+- No artist(s)/author(s) name
+- Don't need page cound
+-->
+
+---
+layout: image
+image: /kavita-home.png
+---
+
+<!--
+And here's Kavita
+
+✔️
+- 4.5k stars on Github
+- Do like their filtering system (not show here because it's not the main discussion)
+
+❌
+- Color palette feels outdated
+- No artist(s)/author(s) name
+- Don't need to know if it's a manga/comicabcsdajsjal
+-->
+
 ---
 layout: image-right
-image: /home.png
+image: /ymym-home.png
 ---
 
-# Highlights
-Yomuyume is a platform that allows you to
+## UI/UX
 
-- Own your data - bring your own library
-- Share it with friends or the internet
-- Track reading progress
-- Get recommendations based on your preferences
+- Put ourselves in the shoes of the readers
+- Inspirations from Material Design 3
 
-Built with fast and modern technologies
+![](/md3-sample.png)
 
-<NuxtRust />
+<!--
+To tackle this problem
+- We see ourselves as readers, not developers
+  - find out which information is important and not
+  - how important it is to render them to the readers
+- MD3: latest version of Material Design from Google's design team
+  - have their Design Kit and Theme Builder on figma
+  - -> easy to implement and customize for our own needs
+-->
 
 ---
+layout: center
+---
 
-# Tech stack decisions
+## Performance
 
-## Nuxt.js
+<!--
+Let's talk about performance
+- 2 previous examples
+  - Komga uses Kotlin, which runs on JVM
+  - Kavita uses C#, which runs on .NET
+- Problems both have:
+  - garbage collection
+  - compile to bytecode, not native code
+-->
+
+---
+layout: two-cols-header
+---
+
+## Performance
+
+::left::
+
+### Nuxt.js
+
 - Built on top of Vue.js
 - Faster, more ergonomic than React
 - Single-File Components
 
-```vue {all|1-3|5-7|9-14|all}
-<script setup lang="ts">
-const greeting: Ref<string> = ref('Hello World!')
-</script>
+::right::
 
-<template>
-  <p class="greeting">{{ greeting }}</p>
-</template>
-
-<style>
-.greeting {
-    color: red;
-  font-weight: bold;
-}
-</style>
-```
-
----
-
-## Rust
+### Rust
 
 - Neck-to-neck with C/C++ in performance
 - Has one of the best tooling and ecosystems
 - The compiler is a friend
 
-```bash
-$ cargo run
-   Compiling patterns v0.1.0 (file:///projects/patterns)
-error[E0308]: mismatched types
- --> src/main.rs:2:9
-  |
-2 |     let (x, y) = (1, 2, 3);
-  |         ^^^^^^   --------- this expression has type `({integer}, {integer}, {integer})`
-  |         |
-  |         expected a tuple with 3 elements, found one with 2 elements
-  |
-  = note: expected tuple `({integer}, {integer}, {integer})`
-             found tuple `(_, _)`
+<!--
+[TODO]
+-->
 
-For more information about this error, try `rustc --explain E0308`.
-error: could not compile `patterns` due to previous error
-```
+---
+
+## Metadata
+
+<!--
+[TODO]
+-->
+
+---
+
+[TODO]
